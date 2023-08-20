@@ -39,7 +39,7 @@ $Busca.addEventListener("keydown", (e) => {
     let buscaPais = $Busca.value.toLocaleUpperCase();
 
     if (e.key === "Enter") {
-        const url = `https://restcountries.eu/rest/v2/name/${buscaPais}?fullText=true`;
+        const url = `https://restcountries.com/v3/name/${buscaPais}?fullText=true`;
         $ObtenerPais(url);
         if (buscaPais == "") {
             window.location.reload();
@@ -61,12 +61,12 @@ function Pais() {
         if (e.target.classList.contains("select")) {
             let buscaPais = $select.value;
             console.log(buscaPais);
-            const url = `https://restcountries.eu/rest/v2/regionalbloc/${buscaPais}`;
+            const url = `https://restcountries.com/v3/regionalbloc/${buscaPais}`;
             $ObtenerPais(url);
         }
     });
     let buscaPais = $select.value;
-    const url = `https://restcountries.eu/rest/v2/regionalbloc/${buscaPais}`;
+    const url = `https://restcountries.com/v3/regionalbloc/${buscaPais}`;
     $ObtenerPais(url);
 }
 Pais();
